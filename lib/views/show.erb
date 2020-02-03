@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Page Potin</title>
+  </head>
+  <body>
+    <h1>Mon super site de gossip, depuis le dossier views !</h1>
+
+    #<a href="/gossips/new/">Suviez le lien gossip</a>
+    
+    
+    <h2>PAGE POTIN !</h2>
+    <% gossips.each do |gossip| %>
+        <p> Voici le potin n° <%= id%><br/>
+        Son auteur : <%= gossip.author %><br/>
+        Le contenu du potin : <%= gossip.content %>
+        </p>
+    <% end %>
+    <a href="<%= id%>/edit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Editer le potin</a>
+    <!--<a href="<%= id%>/edit">Editer le potin</a>-->
+    <a href="/">Lien pour revenir à la page des potins</a>
+  
+    </body>
+</html>
